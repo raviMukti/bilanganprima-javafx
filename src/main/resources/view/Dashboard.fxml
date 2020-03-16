@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="paneAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paneAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #3fd166;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
    <children>
-      <Label fx:id="lblHelloWorld" layoutX="267.0" layoutY="192.0" text="Hello World!" />
+      <BorderPane prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="223.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Bilangan Prima" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="138.0" layoutY="10.0" prefHeight="72.0" prefWidth="340.0" text="Dalam matematika, bilangan prima adalah bilangan asli yang lebih besar dari angka 1, yang faktor pembaginya adalah 1 dan bilangan itu sendiri. Silakan masukan batas angka terbesar" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="fieldAngkaBatasAtas" prefHeight="41.0" prefWidth="340.0">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="btnKalkulasi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnKalkulasiAction" prefHeight="30.0" prefWidth="335.0" text="Kalkulasi" textFill="#3fd166" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <TextArea fx:id="textAreaHasil" prefHeight="147.0" prefWidth="400.0" style="-fx-border-radius: 15;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+               </BorderPane.margin>
+            </TextArea>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
